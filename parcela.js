@@ -250,4 +250,4 @@
         return Parcela._ready;
     };
 
-})(global.window || require('fake-dom');
+})(global.window || require('fake-dom'));
