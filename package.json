@@ -25,7 +25,7 @@
     ],
     "main": "parcela.js",
     "dependencies": {
-        "event": "Parcela/event",
+        "event-mobile":"Parcela/event-mobile",
         "utils": "Parcela/utils",
         "promise-ext": "Parcela/promise-ext",
         "lang-ext": "Parcela/lang-ext",
