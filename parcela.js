@@ -1,7 +1,7 @@
 /**
  * The Parcela module is an aggregator for all the individual modules that the library uses.
  * The developer is free to use it as it is or tailor it to contain whatever modules
- * he/she might need in the global namespace.  
+ * he/she might need in the global namespace.
  *
  * The modules themselves work quite well independent of this module and can be used
  * separately without the need of them being integrated under one globa namespace.
@@ -79,12 +79,8 @@
         debug: true,
         base: '/components'
     };
-     var Event = require('event'),
-         EventDom = require('event-dom'),
-         EventEmitter = require('event/event-emitter.js'),
-         EventListener = require('event/event-listener.js'),
-         HammerJS = require('event-hammerjs'),
-         ParcelEvents = require('parcel/events.js'),
+     var Event = require('event-mobile')(window),
+         ParcelEvents = require('parcel/events.js')(window),
          io_config = {
              reqTimeout: 3000,
              debug: true,
@@ -92,6 +88,8 @@
          },
          EVENT_NAME_TIMERS_EXECUTION = 'timers:asyncfunc';
 
+    require('event/event-emitter.js');
+    require('event/event-listener.js');
     require('ypromise');
     require('promise-ext');
     require('lang-ext');
@@ -131,10 +129,6 @@
      * @static
     */
     Parcela.Event = Event;
-    EventDom.mergeInto(Parcela.Event);
-    EventEmitter.mergeInto(Parcela.Event);
-    EventListener.mergeInto(Parcela.Event);
-    HammerJS.mergeInto(Parcela.Event);
 
     // Now we setup `_afterAsyncFn` --> the `timers` module uses this:
     // whenever `async() or `later() is called, it will invoke `_afterAsyncFn` if it is defined
@@ -160,7 +154,7 @@
     @static
     */
     Parcela.Parcel = require('parcel');
-    ParcelEvents.mergeInto(Parcela.Parcel, Parcela.Event); // needs both Parcel and Event to merge
+    ParcelEvents.mergeInto(Parcela.Parcel);
     var vdom = require('virtual-dom')(window);
     /**
     Reference to the virtual DOM [render](vDOM.html#method_render) method
