@@ -25,13 +25,13 @@
     ],
     "main": "parcela.js",
     "dependencies": {
-        "event": "git://github.com/Parcela/event.git#v0.0.7",
-        "utils": "git://github.com/Parcela/utils.git#v0.0.7",
-        "promise-ext": "git://github.com/Parcela/promise-ext.git#v0.0.7",
-        "lang-ext": "git://github.com/Parcela/lang-ext.git#v0.0.7",
-        "io": "git://github.com/Parcela/io.git#v0.0.7",
-        "parcel": "git://github.com/Parcela/parcel.git#v0.0.7",
-        "virtual-dom": "git://github.com/Parcela/virtual-dom.git#v0.0.7"
+        "event": "Parcela/event",
+        "utils": "Parcela/utils",
+        "promise-ext": "Parcela/promise-ext",
+        "lang-ext": "Parcela/lang-ext",
+        "io": "Parcela/io",
+        "parcel": "Parcela/parcel",
+        "virtual-dom": "Parcela/virtual-dom"
     },
     "devDependencies": {
         "chai": "^1.9.1",
