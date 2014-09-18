@@ -31,7 +31,8 @@
         "lang-ext": "Parcela/lang-ext",
         "io": "Parcela/io",
         "parcel": "Parcela/parcel",
-        "virtual-dom": "Parcela/virtual-dom"
+        "virtual-dom": "Parcela/virtual-dom",
+		"fake-dom":"Parcela/fake-dom"
     },
     "devDependencies": {
         "chai": "^1.9.1",
