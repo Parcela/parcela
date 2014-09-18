@@ -118,8 +118,12 @@
      * @type Object
      * @static
     */
-    Parcela.IO = require('io');
-    Parcela.IO.config.merge(io_config);
+
+
+    // Temporarely suppress IO until the new syntaxt is ready:
+
+    // Parcela.IO = require('io');
+    // Parcela.IO.config.merge(io_config);
 
 
     /**
