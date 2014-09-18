@@ -118,13 +118,8 @@
      * @type Object
      * @static
     */
-
-
-    // Temporarely suppress IO until the new syntaxt is ready:
-
-    // Parcela.IO = require('io');
-    // Parcela.IO.config.merge(io_config);
-
+    Parcela.IO = require('io')(window);
+    Parcela.IO.config.merge(io_config);
 
     /**
      * [Event](Event.html)-instance
