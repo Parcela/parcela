@@ -80,7 +80,6 @@
         base: '/components'
     };
      var Event = require('event-mobile')(window),
-         ParcelEvents = require('parcel/events.js')(window),
          io_config = {
              reqTimeout: 3000,
              debug: true,
@@ -153,7 +152,8 @@
     @static
     */
     Parcela.Parcel = require('parcel');
-    ParcelEvents.mergeInto(Parcela.Parcel);
+    Parcela.ParcelEv = require('parcel/events.js')(window);
+
     var vdom = require('virtual-dom')(window);
     /**
     Reference to the virtual DOM [render](vDOM.html#method_render) method
