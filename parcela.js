@@ -79,7 +79,8 @@
         debug: true,
         base: '/components'
     };
-     var Event = require('event-mobile')(window),
+     var fakedom = window.navigator.userAgent==='fake',
+         Event = fakedom ? require('event') : require('event-mobile')(window),
          io_config = {
              reqTimeout: 3000,
              debug: true,
